@@ -14,16 +14,16 @@ params:
     address:
       - city: London
         country: UK
-        street: London Business School
-        title: Address
+        street: 1 North Bank, Flat 33
+        title: Regent Court
     buttonClear: Clear
     buttonSend: Send message
     email:
-      - email: ga.vidalonveliz@gmail.com
+      - email: anderson.tuestas@gmail.com
         title: Email
     enable: yes
     phone:
-      - phone: 07377905793
+      - phone: (44) 7376 467899
         title: Phone
   custom_css: []
   custom_js: []
@@ -51,10 +51,10 @@ params:
         url: https://www.instagram.com
       - icon: fa-github
         label: GitHub
-        url: https://github.com/GonzaloVidalonV
+        url: https://github.com/andergod
       - icon: fa-linkedin
         label: LinkedIn
-        url: https://www.linkedin.com
+        url: https://www.linkedin.com/in/jesus-tuesta/
   image: ''
   name: Your name
   navigation:
@@ -106,10 +106,10 @@ params:
   two:
     buttonText: Get Started
     enable: yes
-    subtitle: "Hi, my name is Gonzalo Vidalon, I am currently studying the Master in Financial
+    subtitle: "Hi, my name is Jesus TUesta, I am currently studying the Master in Financial
     Analysis (MFA2023) at London Business School. Bachelor in Economics at Universidad del 
     Pacífico (UP) and Bsc. in Economics & Finance at University of London with First Class 
-    Honours. Proficient in SQL, R, Python, Stata, Eviews Microsoft Excel (VBA) and Bloomberg. 
-    Passed Level I of the CFA Program. Native Spanish speaker."
+    Honours. Proficient in SQL, R, Python, Eviews Microsoft Excel (VBA) and Bloomberg. 
+    Passed Level II of the CFA Program. Native Spanish speaker."
     title: Short Bio
     url: blogs
