@@ -1,0 +1,115 @@
+baseURL: https://gonzalo-vidalon-portfolio.netlify.app/
+languageCode: en-us
+title: Portfolio website for Gonzalo Vidalon
+theme: forty
+googleAnalytics: ''
+disqusShortname: ''
+params:
+  banner:
+    buttonText: Get Started
+    subtitle: I am currently studying the Master in Financial Analysis (MFA2023) at London Business School.
+    title: Gonzalo Vidalon Veliz
+  blog: {}
+  contact:
+    address:
+      - city: London
+        country: UK
+        street: London Business School
+        title: Address
+    buttonClear: Clear
+    buttonSend: Send message
+    email:
+      - email: ga.vidalonveliz@gmail.com
+        title: Email
+    enable: yes
+    phone:
+      - phone: 07377905793
+        title: Phone
+  custom_css: []
+  custom_js: []
+  description: Your description
+  error404:
+    heading: Page couldn't be found
+    text: Please visit [this page](/)
+  favicon: favicon.ico
+  footer:
+    copyright: London Business School - Data Science in R
+    enable: yes
+    quicklinks:
+      - alt: HTML5 UP
+        text: 'Design: '
+        url: https://www.london.edu/
+    social:
+      - icon: fa-twitter
+        label: Twitter
+        url: https://www.twitter.com
+      - icon: fa-facebook
+        label: Facebook
+        url: https://www.facebook.com
+      - icon: fa-instagram
+        label: Instagram
+        url: https://www.instagram.com
+      - icon: fa-github
+        label: GitHub
+        url: https://github.com/GonzaloVidalonV
+      - icon: fa-linkedin
+        label: LinkedIn
+        url: https://www.linkedin.com
+  image: ''
+  name: Your name
+  navigation:
+    button1:
+      - name: Get Started
+        url: blogs
+    button2:
+      - name: Log In
+        url: '#'
+    links:
+      - name: Home
+        url: blogs/ipsum
+      - name: Blogs
+        url: blogs/risk_return
+      - name: Generic Blog
+        url: blogs/ipsum
+      - name: Elements
+        url: elements.html
+    menu: Menu
+    subtitle:
+    title: Home
+  tiles:
+    enable: yes
+    showcase:
+      - image: lbs.jpg
+        subtitle: General Information
+        title: Home
+        url: blogs/risk_return
+      - image: pic02.jpg
+        subtitle: If you want to know more about my experience
+        title: About
+        url: blogs/tempus
+      - image: pic03.jpg
+        subtitle: Research
+        title: Blog
+        url: blogs/magna
+      - image: pic04.jpg
+        subtitle: 
+        title: Other Activities
+        url: blogs/ipsum
+      - image: pic05.jpg
+        subtitle: Ipsum Dolor Sit Amet
+        title: Contact
+        url: blogs/ipsum
+      - image: pic06.jpg
+        subtitle: People I have worked with
+        title: Professional References
+        url: blogs/ipsum
+  two:
+    buttonText: Get Started
+    enable: yes
+    subtitle: "Hi, my name is Gonzalo Vidalon, I am currently studying the Master in Financial
+    Analysis (MFA2023) at London Business School. Bachelor in Economics at Universidad del 
+    Pacífico (UP) and Bsc. in Economics & Finance at University of London with First Class 
+    Honours. Proficient in SQL, R, Python, Stata, Eviews Microsoft Excel (VBA) and Bloomberg. 
+    Passed Level I of the CFA Program. Native Spanish speaker."
+    title: Short Bio
+    url: blogs
