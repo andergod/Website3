@@ -1,6 +1,6 @@
-baseURL: https://gonzalo-vidalon-portfolio.netlify.app/
+baseURL: https://jesus-tuesta-portfolio.netlify.app/
 languageCode: en-us
-title: Portfolio website for Gonzalo Vidalon
+title: Portfolio website for Jesus Tuesta
 theme: forty
 googleAnalytics: ''
 disqusShortname: ''
@@ -8,7 +8,7 @@ params:
   banner:
     buttonText: Get Started
     subtitle: I am currently studying the Master in Financial Analysis (MFA2023) at London Business School.
-    title: Gonzalo Vidalon Veliz
+    title: Jesus Tuesta
   blog: {}
   contact:
     address:
