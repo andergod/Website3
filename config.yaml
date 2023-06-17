@@ -12,7 +12,7 @@ params:
   blog: {}
   contact:
     address:
-      - city: Londons
+      - city: London
         country: UK
         street: 1 North Bank, Flat 33
         title: Regent Court
