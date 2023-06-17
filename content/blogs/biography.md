@@ -5,13 +5,14 @@ categories:
 date: "2017-10-31T21:28:43-05:00"
 description: ""
 draft: false
-image: pic10.jpg
 keywords: ""
-slug: risk_return
-title: Ipsum
+slug: biography
+title: Biography
 ---
 
 # My life
+
+![Alt Text](/img/blogs/LinkedIn_Photo.jpeg)
 
 I have a strong educational background in economics and finance. I completed a Bachelor's degree in Economics from Universidad del Pacifico, where I excelled in courses such as Postgraduate Math, Portfolio Management, and Econometrics. Following that, I pursued a BSc degree in Economics and Finance from the University of London, with academic direction from the London School of Economics, and achieved First Class Honours. During my studies, I focused on courses such as Mathematical Economics, Quantitative Finance, and Asset Pricing.
 

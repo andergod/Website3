@@ -60,19 +60,16 @@ params:
   navigation:
     button1:
       - name: Get Started
-        url: blogs
-    button2:
-      - name: Log In
-        url: '#'
+        url: /
     links:
       - name: Home
-        url: blogs/ipsum
+        url: /
       - name: Blogs
         url: blogs/risk_return
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      - name: Data Analysis
+        url: blogs/risk_return
+      - name: Biography
+        url: blogs/biography
     menu: Menu
     subtitle:
     title: Home
@@ -80,29 +77,17 @@ params:
     enable: yes
     showcase:
       - image: lbs.jpg
-        subtitle: General Information
+        subtitle: Myself and my history
         title: Home
-        url: blogs/risk_return
+        url: blogs/biography
       - image: pic02.jpg
         subtitle: If you want to know more about my experience
-        title: About
-        url: blogs/tempus
+        title: Experience
+        url: blogs/biography
       - image: pic03.jpg
         subtitle: Research
         title: Blog
-        url: blogs/magna
-      - image: pic04.jpg
-        subtitle: 
-        title: Other Activities
-        url: blogs/ipsum
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Contact
-        url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: People I have worked with
-        title: Professional References
-        url: blogs/ipsum
+        url: blogs/risk_return
   two:
     buttonText: Get Started
     enable: yes
@@ -112,4 +97,4 @@ params:
     Honours. Proficient in SQL, R, Python, Eviews Microsoft Excel (VBA) and Bloomberg. 
     Passed Level II of the CFA Program. Native Spanish speaker."
     title: Short Bio
-    url: blogs
+    url: /
