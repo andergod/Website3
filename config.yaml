@@ -7,7 +7,7 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Get Started
-    subtitle: I am currently studying the Master in Financial Analysis (MFA2023) at London Business School.
+    subtitle: Curious person and looking to create impact in the financial world with quantitative tools
     title: Jesus Tuesta
   blog: {}
   contact:
@@ -58,43 +58,40 @@ params:
   image: ''
   name: Your name
   navigation:
-    button1:
-      - name: Get Started
-        url: /
     links:
       - name: Home
         url: /
-      - name: Blogs
-        url: blogs/risk_return
-      - name: Data Analysis
-        url: blogs/risk_return
-      - name: Biography
+      - name: About Myself
         url: blogs/biography
+      - name: Projects
+        url: blogs/risk_return
+      - name: Resume
+        url: blogs/risk_return
     menu: Menu
     subtitle:
     title: Home
   tiles:
     enable: yes
     showcase:
-      - image: lbs.jpg
+      - image: Jesus-MachuPichu.jpg
         subtitle: Myself and my history
-        title: Home
+        title: About Myself
         url: blogs/biography
-      - image: pic02.jpg
-        subtitle: If you want to know more about my experience
-        title: Experience
-        url: blogs/biography
-      - image: pic03.jpg
-        subtitle: Research
-        title: Blog
+      - image: Data-analysis.jpg
+        subtitle: Practical showcase of my experience
+        title: Projects
+        url: blogs/risk_return
+      - image: Jesus-UP.png
+        subtitle: Follow my journey so far
+        title: Resume
         url: blogs/risk_return
   two:
     buttonText: Get Started
     enable: yes
-    subtitle: "Hi, my name is Jesus Tuesta, I am currently studying the Master in Financial
-    Analysis (MFA2023) at London Business School. Bachelor in Economics at Universidad del 
-    Pacífico (UP) and Bsc. in Economics & Finance at University of London with First Class 
-    Honours. Proficient in SQL, R, Python, Eviews Microsoft Excel (VBA) and Bloomberg. 
-    Passed Level II of the CFA Program. Native Spanish speaker."
+    subtitle: "Hi, my name is Jesus Tuesta. I am ambitious economist looking to understand more about the financial
+    world using quantitative tools to explore it. I finished  my Master in Financial
+    Analysis (MFA2023) at London Business School. I also have a Bachelor in Economics from the Universidad del 
+    Pacífico (UP) in Peru and Bsc. in Economics & Finance at University from The University of London with First Class 
+    Honours. I am proficient in SQL, R, Python, Microsoft Excel (VBA) and Bloomberg."
     title: Short Bio
     url: /
