@@ -1,5 +1,5 @@
 ---
-title: Index for projects
+title: List of Projects
 author: ''
 date: '2023-06-26'
 slug: []
@@ -14,20 +14,19 @@ slug: index-for-projects
 draft: no
 ---
 
-## Quantitative Analysis Projects
+## Mass shootings in the US
 
-### Mass shootings in the US
+Analysing the different patterns in Mass Shootings in the US
 
-![Project 1](img/blogs/my_plot5.png)
+<img src="/img/blogs/Boxplots.png" width="400px">
 
-- **Description**: Analysing the different patterns in Mass Shootings in the US
-- **URL**: [Project 1](/blogs/risk_return)
+<a href="/blogs/risk_return" class="button">Read More</a>
 
-### Project 2
+## Macroeconomic Analysis
 
-![Project 2](/path/to/project2_thumbnail.jpg)
+Macroeconomic analysis of the different FX currencies
 
-- **Description**: Project 2 focuses on options pricing models and risk management in financial markets.
-- **URL**: [Project 2](/project2.html)
+<img src="/img/blogs/Fx_image.jpg" width="400px">
 
+<a href="/blogs/risk_return" class="button">Read More</a>
 

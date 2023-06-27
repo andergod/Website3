@@ -3,10 +3,11 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Lorem Etiam Nullam
+description: This is a dynamic section of my resume
 draft: false
-image: pic09.jpg
+image: ""
 keywords: ""
-slug: magna
-title: Magna
+slug: Resume
+title: Resume
 ---
+Hi  this is the resume

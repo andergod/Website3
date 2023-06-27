@@ -5,9 +5,9 @@ theme: forty
 googleAnalytics: ''
 disqusShortname: ''
 params:
-  banner:
+  banner: 
     buttonText: Get Started
-    subtitle: Curious analyst and looking to create impact in the financial world with quantitative tools
+    subtitle: Curious analyst looking to create impact in the financial world with quantitative tools
     title: Jesus Tuesta
   blog: {}
   contact:
@@ -36,7 +36,7 @@ params:
     copyright: London Business School - Data Science in R
     enable: yes
     quicklinks:
-      - alt: HTML5 UP
+      - alt: LBS
         text: 'Design: '
         url: https://www.london.edu/
     social:
@@ -64,9 +64,9 @@ params:
       - name: About Myself
         url: blogs/biography
       - name: Projects
-        url: blogs/risk_return
+        url: post/index-for-projects
       - name: Resume
-        url: blogs/risk_return
+        url:  blogs/tempus
     menu: Menu
     subtitle:
     title: Home
@@ -80,11 +80,11 @@ params:
       - image: Data-analysis.jpg
         subtitle: Practical showcase of my experience
         title: Projects
-        url: post/2023-06-26-index-for-projects
+        url: post/index-for-projects
       - image: Jesus-UP.png
         subtitle: Follow my journey so far
         title: Resume
-        url: blogs/risk_return
+        url: blogs/tempus
   two:
     buttonText: Get Started
     enable: yes
@@ -95,3 +95,8 @@ params:
     Honours. I am proficient in SQL, R, Python, Microsoft Excel (VBA) and Bloomberg."
     title: Short Bio
     url: /
+    
+markup: 
+  goldmark: 
+    renderer: 
+      unsafe: true

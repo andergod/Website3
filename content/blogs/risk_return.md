@@ -3,7 +3,7 @@ categories:
 - ""    #the front matter should be like the one found in, e.g., blog2.md. It cannot be like the normal Rmd we used
 - ""
 date: "2021-09-30"
-description: Analyzing mass shootings in US # the title that will show up once someone gets to this page
+description: Analyzing mass shootings in US 
 draft: false
 
 keywords: ""
@@ -52,7 +52,6 @@ mass_shootings %>%
   #Count mass shootings by year
   summarise(count=n())
 ```
-
 
 -   Generate a bar chart that identifies the number of mass shooters associated with each race category. The bars should be sorted from highest to lowest and each bar should show its number.
 
@@ -184,8 +183,3 @@ mass_shootings %>%
 ```
 ![Alt Text](/img/blogs/my_plot5.png)
 
-
-
-<img src="/blogs/risk_return_files/figure-html/unnamed-chunk-1-1.png" width="648" style="display: block; margin: auto;" />
-
-<img src="/blogs/risk_return_files/figure-html/risk_return-1.png" width="648" style="display: block; margin: auto;" />

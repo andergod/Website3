@@ -1,0 +1,64 @@
+/* Styles for the resume */
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.timeline-date {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.timeline-company {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-title {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  color: #666;
+  font-size: 14px;
+}
+
+.timeline-description ul {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.timeline-description li {
+  margin-bottom: 5px;
+}
