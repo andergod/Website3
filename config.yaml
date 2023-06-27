@@ -7,15 +7,15 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Get Started
-    subtitle: Curious person and looking to create impact in the financial world with quantitative tools
+    subtitle: Curious analyst and looking to create impact in the financial world with quantitative tools
     title: Jesus Tuesta
   blog: {}
   contact:
     address:
       - city: London
         country: UK
-        street: 1 North Bank, Flat 33
-        title: Regent Court
+        street: 1 North Bank, Flat 33, Regent Court
+        title: Address
     buttonClear: Clear
     buttonSend: Send message
     email:
@@ -80,7 +80,7 @@ params:
       - image: Data-analysis.jpg
         subtitle: Practical showcase of my experience
         title: Projects
-        url: blogs/risk_return
+        url: post/2023-06-26-index-for-projects
       - image: Jesus-UP.png
         subtitle: Follow my journey so far
         title: Resume
