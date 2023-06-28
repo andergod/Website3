@@ -105,3 +105,44 @@ Main courses: Postgraduate Math (Real analysis in Economics), Portfolio Manageme
   </div>
 </body>
 
+
+# Working with NGOs
+A big part of me has always being involved with NGOs to make a greater impact on society
+
+<head>
+  <title>My Experience</title>
+  <style>
+    .experience {
+      border: 2px solid white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .experience:first-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="experience">
+    <h3>YouthAid - 2023<br>
+    Probono Consultant
+    </h3>
+    <p style="text-align: justify;">
+•	Working with Upay NGO to attract new kids and amplify the reach in rural areas of India <br>
+•	Created a fundraising plan to attract 20+ corporate potential donors and organize low-cost events for individuals
+</p>
+  </div>
+  <div class="experience">
+    <h3>Alimentando Esperanza - 2021 <br>
+    Fundraising Volunteer </h3>
+    <p style="text-align: justify;">
+    •	NGO aim to provide food to homeless who suffer from drug abuse  <br>
+•	Initiated and closed deal with Dona.pe to be an additional crowdfunder platform <br>
+•	Raised individual donor funds for 300 meals 
+<br>
+</p>
+  </div>
+
+</body>
+
