@@ -22,9 +22,9 @@ Analysing the different patterns in Mass Shootings in the US
 
 <a href="/blogs/risk_return" class="button">Read More</a>
 
-## Macroeconomic Analysis
+## Webscrapper
 
-Macroeconomic analysis of the different FX currencies
+Web scrapper for crypto sentiment analysis 
 
 <img src="/img/blogs/Fx_image.jpg" width="400px">
 
