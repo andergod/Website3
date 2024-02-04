@@ -13,11 +13,82 @@ title: Web scrapper for crypto sentiment analysis
 
 # Web scrapper for crypto sentiment analysis 
 
-```r
-#Download data
-mass_shootings <- read_csv(here::here("data", "mass_shootings.csv"))
-#See the data
-glimpse(mass_shootings)
+```python
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import spacy
+from website_data import website_data
+#nltk.download('vader_lexicon')
+#nltk.download('stopwords')
+#nltk.download('punkt')
+
+cryptocurrencies = pd.read_excel('Criptocurrency_list.xlsx')
+crypto_dict={name.lower().strip(): ticker for name, ticker in zip(cryptocurrencies['Name'], cryptocurrencies['Ticker'])}
+nlp = spacy.load('en_core_web_sm')
+
+
+def clean_text(text)->str:
+    # Tokenize the text
+    words = word_tokenize(text)
+    # Remove stop words
+    stop_words = set(stopwords.words('english'))
+    filtered_words = [word.lower() for word in words if word.isalnum() and word.lower() not in stop_words]
+    return ' '.join(filtered_words)
+        
+def analyze_sentiment(text)->str:
+    sia = SentimentIntensityAnalyzer()
+    sentiment_score = sia.polarity_scores(text)['compound']
+    # Assume a simple threshold for sentiment
+    if sentiment_score >= 0.1:
+        return 'Buy'
+    elif sentiment_score <= -0.1:
+        return 'Sell'
+    else:
+        return 'Hold'
+    
+def get_main_currency(text)->str:
+    doc = nlp(text)
+    # Extract entities recognized as cryptocurrencies
+    recognized_currencies = [ent.text.lower() for ent in doc.ents if ent.text.lower() in crypto_dict]
+    # If there are recognized cryptocurrencies, return the first one, otherwise return None
+    return recognized_currencies[0] if recognized_currencies else None
+
+def run_process(website:str)->None:
+    s=website_data()
+    if website=="cryptonews_relevantpost":
+        posts=s.cryptonews_relevantpost()
+        type="cryptonews_relevantpost"
+    elif website=="coindesk_relevantpost":
+        posts=s.coindesk_relevantpost()
+        type="coindesk_relevantpost"
+    elif website=="yahoo_relevantpost":
+        posts=s.yahoo_relevantpost()
+        type="yahoo_relevantpost"
+    elif website=="independent_relevantpost":
+        posts=s.independent_relevantpost()
+        type="independent_relevantpost"
+    for post in posts:
+        text=s.text_from_relevant(post, type)
+        clean=clean_text(text)
+        sentiment=analyze_sentiment(clean)
+        currency=get_main_currency(text)
+        if currency:
+            print(f'I should {sentiment} {crypto_dict[currency].upper()}')
+        else:
+            print('No relevant currency found')       
+    
+
+if __name__ == '__main__':
+    run_process("cryptonews_relevantpost")
+    run_process("coindesk_relevantpost")
+    run_process("yahoo_relevantpost")
+    run_process("independent_relevantpost")
+    
 ```
 
 ```         
@@ -81,105 +152,4 @@ mass_shootings %>%
 ```
 ![Alt Text](/img/blogs/my_plot.png)
 
--   Generate a boxplot visualizing the number of total victims, by type of location.
-
-```r
-#Boxplot of total victims by location type
-mass_shootings  %>% 
-  #Set the aesthetic
-  ggplot(aes(x=location_type, y=total_victims)) +
-  #Make a boxplot graph with a black and white theme
-  geom_boxplot() + theme_bw() +
-  #Add labels and title
-  labs(y='N People', title='Total victims by location type', x='') +
-   theme(plot.title = element_text(hjust=0.5, vjust=0.5) )
-
-```
-![Alt Text](/img/blogs/my_plot2.png)
-
-
-### More open-ended questions
-
-Address the following questions. Generate appropriate figures/tables to support your conclusions.
-
-```r
-#Males shooters with prior mental illness
-mass_shootings %>% 
-  #Filter it for males shooter, happening after 2000 with previous mental illness and white race
-  filter(male==TRUE & year>2000 & prior_mental_illness=='Yes' & race=='White') %>% 
-  #Count total cases
-  summarise(total=n())
-  
-
-```
-
--   Which month of the year has the most mass shootings? Generate a bar chart sorted in chronological (natural) order (Jan-Feb-Mar- etc) to provide evidence of your answer.
-
-```r
-#Set a vector with the appropiater order
-months_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-
-#Add the factor to the months date in the data set
-mass_shootings$month<- factor(mass_shootings$month, levels = months_order)
-
-#Make the graph
-mass_shootings %>%
-  #Calculate the total shooting by month
-  group_by(month) %>% 
-  summarise(count=n()) %>% 
-  #Make a column graph
-  ggplot(aes(x=month, y=count)) +
-  geom_col(fill='#001e62') +
-  #Set the appearance parameters
-  theme_bw() + 
-  labs(x='', title='Mass shootings by Month', y='Frequency') +
-   theme(plot.title = element_text(hjust=0.5, vjust=0.5) )
-
-```
-
-![Alt Text](/img/blogs/my_plot3.png)
-
-
-The biggest amounts of mass shootings happened in February, March,October and November. 
-
-
--   How does the distribution of mass shooting fatalities differ between White and Black shooters? What about White and Latino shooters?
-
-```r
-#Mass shooting by race
-mass_shootings %>% 
-  #Only takes the shootings done by white and black shooters 
-  filter(race=='White' | race=='Black') %>% 
-  #Make a fatality histogram by race 
-  ggplot(aes(x=fatalities)) +
-  geom_histogram(binwidth = 3, fill = "#ADD8E6")  + #Make a histogram
-  facet_wrap(~race, scales='free') +
-  #Set the appearance parameters
-  labs(x = "Fatalities", y = "Frequency", title = "White and Black shooters fatalities distribution") +
-  theme_bw() + #Add the labels
-   theme(plot.title = element_text(hjust=0.5, vjust=0.5) ) #Put the title in the middle
-```
-
-![Alt Text](/img/blogs/my_plot4.png)
-
-There is by far less fatalities in Black shooters than White ones. The former usually have less than 10 fatalities, while for white shooters the fatalities are higher. 
-
-```r
-#Mass shooting by race
-mass_shootings %>% 
-  #Filter by race white and latino
-  filter(race=='White' | race=='Latino') %>% 
-  #Make the graph
-  ggplot(aes(x=fatalities)) +
-  geom_histogram(binwidth = 3, fill = "#ADD8E6")  + #Make a histogram
-  facet_wrap(~race, scales='free') +
-  #Add labes
-  labs(x = "Fatalities", y = "Frequency", title = "White and Latino shooters fatalities distribution") +
-  #Add aesthetics
-  theme_bw() + 
-   theme(plot.title = element_text(hjust=0.5, vjust=0.5) ) #Put the title in the middle
-
-
-```
-![Alt Text](/img/blogs/my_plot5.png)
-
+-
