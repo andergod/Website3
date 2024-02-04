@@ -13,7 +13,7 @@ title: Web scrapper for crypto sentiment analysis
 
 ## Importing data
 
-The first step is to get the data from different website crypto news. The class , WebsiteData, is designed to perform web scraping on news websites related to cryptocurrency. The class provides methods to retrieve relevant posts' URLs from various sources such as Crypto News, Coindesk, Yahoo Finance, and The Independent. Additionally, there's a method to extract the textual content from a given URL based on the specified type.
+The first step is to get the data from different crypto news websites. The class , WebsiteData, is designed to perform web scraping on news websites related to cryptocurrency. The class provides methods to retrieve relevant posts' URLs from various sources such as Crypto News, Coindesk, Yahoo Finance, and The Independent. Additionally, there's a method to extract the textual content from a given URL based on the specified type.
 
 The scraping process involves making HTTP requests to the respective URLs, parsing the HTML content using BeautifulSoup, and extracting relevant information. The class is modular, with each method focusing on a specific website, enhancing code organization and readability. The text_from_relevant method further allows customization based on the source type, handling specific cases like removing unwanted content or truncating text.
 
@@ -118,6 +118,27 @@ class website_data:
 
 This script aims to analyze sentiment and provide trading recommendations for cryptocurrencies based on relevant posts from different news websites. It uses the WebsiteData class to perform web scraping, and the sentiment analysis is done using the NLTK and spaCy libraries.
 
+The sentiment analysis in this script is performed using the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool from the nltk library. Here's a breakdown of how the sentiment analysis works:
+
+### 1)VADER SentimentIntensityAnalyzer:
+The SentimentIntensityAnalyzer from the nltk.sentiment module is used to perform sentiment analysis. It assigns a sentiment polarity score to a given text, indicating the positivity, negativity, and neutrality of the text.The VADER sentiment analysis tool determines the sentiment polarity of a given text by employing a lexicon-based approach. It utilizes a pre-established lexicon with sentiment scores assigned to individual words, ranging from -4 to +4. Words are analyzed for their valence, where positive, negative, and neutral sentiments are represented by corresponding scores. Intensifiers and negations are taken into account to adjust the sentiment of words, considering modifiers such as "very" or "not." The algorithm calculates a compound score by summing the valence scores, incorporating modifiers, and normalizing the result to a scale between -1 and +1. A positive compound score indicates positive sentiment, a negative score indicates negative sentiment, and a score close to 0 suggests neutrality. VADER also considers factors like emoticons, slang, punctuation, and sentence structure, making it effective for analyzing sentiment in short and informal texts commonly found in social media and headlines.
+
+### 2)Sentiment Polarity Scores:
+The polarity_scores() method of the SentimentIntensityAnalyzer is used to obtain a dictionary of sentiment scores, including the compound score. The compound score is a single value that represents the overall sentiment of the text. It ranges from -1 (most negative) to 1 (most positive), with 0 indicating a neutral sentiment.
+
+### 3)Trading Recommendations based on Compound Score:
+After obtaining the compound sentiment score, the script uses a simple threshold-based approach to provide trading recommendations:
+
+If the compound score is greater than or equal to 0.1, it suggests a "Buy."
+If the compound score is less than or equal to -0.1, it suggests a "Sell."
+Otherwise, it suggests a "Hold."
+This approach assumes that a positive sentiment suggests a favorable condition for the cryptocurrency, while a negative sentiment suggests an unfavorable condition. The choice of the threshold values (0.1 and -0.1) is somewhat arbitrary and can be adjusted based on the desired sensitivity of the sentiment analysis.
+
+It's important to note that sentiment analysis has its limitations and should be interpreted with caution. VADER is particularly useful for analyzing sentiment in short texts, like social media posts and headlines. However, it may not capture the nuances of longer, more complex texts.
+
+Feel free to adjust the threshold values or explore more sophisticated sentiment analysis models if the script's recommendations do not align with your desired level of sensitivity or accuracy.
+
+
 The run_process function orchestrates the entire process for different news websites, extracting relevant posts, cleaning the text, analyzing sentiment, and identifying the main cryptocurrency mentioned. The script then provides trading recommendations based on the sentiment and the main cryptocurrency identified.
 
 Keep in mind that sentiment analysis and extracting the main cryptocurrency are based on assumptions and thresholds, and they might need adjustment based on the specific requirements and characteristics of the data being analyzed.
@@ -205,7 +226,10 @@ if __name__ == '__main__':
     run_process("independent_relevantpost")
     
 
-
 ```
 
+Finally, we can see the results on the next command prompt screen, where we receive the signals and the currencies that each news is recommending us.
+We took website info and create structure results on signals that can be stores or later used for strategies.  
+
+![Alt Text](/img/blogs/Result_crypto.png)
 
