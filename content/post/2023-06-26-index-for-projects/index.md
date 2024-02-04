@@ -28,5 +28,5 @@ Web scrapper for crypto sentiment analysis
 
 <img src="/img/blogs/Fx_image.jpg" width="400px">
 
-<a href="/blogs/risk_return" class="button">Read More</a>
+<a href="/blogs/webscrapper" class="button">Read More</a>
 
